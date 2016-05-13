@@ -3,7 +3,8 @@ MAINTAINER Romans <me@nearly.guru>
 
 # Install base packages
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && \
+RUN apt-get clean && \
+    apt-get update && \
     apt-get -yq install \
         curl \
         git \
